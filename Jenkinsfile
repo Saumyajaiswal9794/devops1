@@ -16,7 +16,7 @@ pipeline {
             }
         }
         stage('Build Image') {
-            agent any
+            agent none
             steps {
                 sh 'docker build -t my-app:${BUILD_NUMBER} .'
             }
